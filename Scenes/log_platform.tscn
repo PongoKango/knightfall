@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbcvvti7sc5sf"]
+
+[ext_resource type="Texture2D" uid="uid://ekg7ixo0dfp3" path="res://Assets/sprites/Background Tileset/Terrain_and_Props.png" id="1_xeb87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l41hf"]
+size = Vector2(79, 12)
+
+[node name="LogPlatform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xeb87")
+region_enabled = true
+region_rect = Rect2(79, 159, 83.5145, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_l41hf")

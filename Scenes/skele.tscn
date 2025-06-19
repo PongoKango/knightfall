@@ -1,9 +1,13 @@
-[gd_scene load_steps=31 format=3 uid="uid://dyujpanpmymb1"]
+[gd_scene load_steps=32 format=3 uid="uid://dyujpanpmymb1"]
 
 [ext_resource type="Texture2D" uid="uid://b5r4e5phwttpo" path="res://Assets/sprites/Enemy PNG Sheets/skeleton/Skeleton Idle.png" id="1_n1jtu"]
 [ext_resource type="Script" uid="uid://dvtpct7p46ct0" path="res://Scripts/skele.gd" id="1_or2pi"]
 [ext_resource type="PackedScene" uid="uid://pq7bvonscnxa" path="res://Scenes/killzone.tscn" id="2_or2pi"]
 [ext_resource type="Texture2D" uid="uid://dv1i2tlij7a8k" path="res://Assets/sprites/Enemy PNG Sheets/skeleton/Skeleton Walk.png" id="3_852gf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_852gf"]
+radius = 11.0
+height = 36.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqkft"]
 size = Vector2(19, 28)
@@ -193,14 +197,14 @@ animations = [{
 script = ExtResource("1_or2pi")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -14)
-shape = SubResource("RectangleShape2D_mqkft")
+position = Vector2(-2, -17)
+shape = SubResource("CapsuleShape2D_852gf")
 
 [node name="killzone" parent="." instance=ExtResource("2_or2pi")]
 position = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0.5, 2)
+position = Vector2(-2.33, 2)
 shape = SubResource("RectangleShape2D_mqkft")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -212,8 +216,8 @@ frame_progress = 0.378297
 
 [node name="Raycast Right" type="RayCast2D" parent="."]
 position = Vector2(0, -14)
-target_position = Vector2(12, 0)
+target_position = Vector2(11, 4)
 
 [node name="Raycast Left" type="RayCast2D" parent="."]
 position = Vector2(0, -14)
-target_position = Vector2(-14, 0)
+target_position = Vector2(-11, 4)

@@ -25,10 +25,10 @@ func _physics_process(delta: float) -> void:
 
 	# 2. Horizontal Movement (based on your existing logic)
 	# Check for wall collisions with raycasts
-	if raycast_right.is_colliding():
+	if direction == 1 and raycast_right.is_colliding():
 		direction = -1
 		animated_sprite.flip_h = true
-	elif raycast_left.is_colliding(): # Use elif to prevent both from firing at once
+	elif direction == -1 and raycast_left.is_colliding():
 		direction = 1
 		animated_sprite.flip_h = false
 

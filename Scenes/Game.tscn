@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cc3ehxfvqvj4o"]
+[gd_scene load_steps=17 format=4 uid="uid://cc3ehxfvqvj4o"]
 
 [ext_resource type="Texture2D" uid="uid://dvhovupul87r0" path="res://Assets/sprites/Background Tileset/BG_1/BG_1.png" id="1_7lihs"]
 [ext_resource type="PackedScene" uid="uid://b6chrdaukevym" path="res://Scenes/Player.tscn" id="1_iukft"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://pq7bvonscnxa" path="res://Scenes/killzone.tscn" id="4_kldst"]
 [ext_resource type="Texture2D" uid="uid://dscdgf1inh4va" path="res://Assets/sprites/Background Tileset/BG_3/BG_3_alt.png" id="5_2irst"]
 [ext_resource type="Texture2D" uid="uid://16yudst11trr" path="res://Assets/sprites/Background Tileset/BG_2/BG_2.png" id="5_fgofq"]
+[ext_resource type="AudioStream" uid="uid://44gcsl4m4h0o" path="res://Assets/music/JDSherbert - Ambiences Music Pack - Dark Dark Woods.mp3" id="9_71axn"]
 [ext_resource type="PackedScene" uid="uid://dyujpanpmymb1" path="res://Scenes/skele.tscn" id="9_bf53h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5yw3"]
@@ -516,6 +517,18 @@ _data = {
 &"move": SubResource("Animation_j5yw3")
 }
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bf53h"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2000, 200, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+inherit_velocity_ratio = 300.0
+direction = Vector3(0, 1, 0)
+spread = 8.0
+gravity = Vector3(0, 1000, 0)
+scale_min = 0.3
+scale_max = 0.5
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
@@ -621,3 +634,12 @@ scale = Vector2(1.25, 1.25)
 [node name="Skele2" parent="." instance=ExtResource("9_bf53h")]
 position = Vector2(62, -2)
 scale = Vector2(1.25, 1.25)
+
+[node name="BackGroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_71axn")
+autoplay = true
+parameters/looping = false
+
+[node name="RainParticles" type="GPUParticles2D" parent="BackGroundMusic"]
+position = Vector2(67, -156)
+process_material = SubResource("ParticleProcessMaterial_bf53h")

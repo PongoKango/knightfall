@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="knightfall-game"
-run/main_scene="uid://cc3ehxfvqvj4o"
+run/main_scene="uid://d22585r8fr4m8"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -38,3 +42,8 @@ move_right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+<<<<<<< Updated upstream
+=======
+textures/vram_compression/import_etc2_astc=true
+2d/snap/snap_2d_transforms_to_pixel=true
+>>>>>>> Stashed changes

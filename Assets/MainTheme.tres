@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://g0kpj2isnsjg"]
+
+[ext_resource type="FontFile" uid="uid://rp7q0qq7a0b8" path="res://Assets/fonts/GermaniaOne-Regular.ttf" id="1_8c7w4"]
+[ext_resource type="FontFile" uid="uid://cg2ucgbpxpaio" path="res://Assets/fonts/Blaka-Regular.ttf" id="1_gu0d2"]
+
+[resource]
+Button/colors/font_color = Color(0.441474, 0.342095, 0.727797, 1)
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_8c7w4")
+Label/fonts/font = ExtResource("1_gu0d2")

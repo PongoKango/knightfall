@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d22585r8fr4m8"]
 
-[ext_resource type="Script" uid="uid://dno1fghsuo0t6" path="res://Scripts/menu.gd" id="1_b04sx"]
+[ext_resource type="Script" uid="uid://ilepv3g26jns" path="res://Scripts/menu 8.22.16GÇ»PM.gd" id="1_b04sx"]
 [ext_resource type="Theme" uid="uid://g0kpj2isnsjg" path="res://Assets/MainTheme.tres" id="2_wljtg"]
 
 [sub_resource type="Animation" id="Animation_b04sx"]
@@ -55,9 +55,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1115.5
+offset_left = -36.5
 offset_top = -59.5
-offset_right = -1042.5
+offset_right = 39.5
 offset_bottom = 59.5
 grow_horizontal = 2
 grow_vertical = 2

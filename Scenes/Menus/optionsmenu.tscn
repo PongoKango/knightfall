@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d13ebmxvh4b8e"]
 
-[ext_resource type="Script" uid="uid://bceb203js0t5n" path="res://Scripts/optionsmenu.gd" id="1_esjgs"]
+[ext_resource type="Script" uid="uid://b2fqybj4pyuum" path="res://Scripts/optionsmenu 8.22.19 PM.gd" id="1_esjgs"]
 [ext_resource type="Theme" uid="uid://g0kpj2isnsjg" path="res://Assets/MainTheme.tres" id="2_ysja2"]
 
 [sub_resource type="Theme" id="Theme_eagl7"]
